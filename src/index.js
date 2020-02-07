@@ -11,7 +11,7 @@ import List from './components/List'
 const App = () => {
   return <Provider store={store}>
     <div className='container'>
-      <p className='container__title'>Top 20 most popular movies</p>
+      <h1 className='container__title'>Top 20 most popular movies</h1>
       <List />
     </div>
   </Provider>

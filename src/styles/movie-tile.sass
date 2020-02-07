@@ -1,0 +1,57 @@
+.movie-tile
+  padding: 20px
+  margin-bottom: 10px
+  border: $border-main
+  box-shadow: $box-shadow-main
+
+  &__title
+    margin: 0 auto
+    padding-bottom: 10px
+    +ellipsis
+    max-width: 300px
+
+  &__rating
+    font-size: 2rem
+    padding: 10px 0
+
+  &__button
+    background-color: $color-button-primary
+    color: $color-button-primary-text
+    cursor: pointer
+    border-radius: .4rem
+    transition: background-color .3s, color .3s
+    padding: .9rem 1.5rem
+
+    &:hover
+      background-color: $color-button-primary-hover
+
+    &:active
+      background-color: $color-button-primary-active
+
+    &:disabled
+      background-color: $color-button-primary-inactive
+
++media-breakpoint-up($breakpoint-xs)
+  .movie-tile
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &__wrapper-left
+      text-align: left
+
+    &__title
+      max-width: 280px
+
+    &__rating
+      margin-right: 30px
+      padding: 0
+
+    &__wrapper-right
+      display: flex
+      align-items: center
+
++media-breakpoint-up($breakpoint-sm)
+  .movie-tile
+    &__title
+      max-width: 350px

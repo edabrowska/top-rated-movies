@@ -1,0 +1,16 @@
+=media-breakpoint-up($breakpoint)
+  @media (min-width: $breakpoint)
+    @content
+
+=media-breakpoint-down($breakpoint)
+  @media (max-width: $breakpoint)
+    @content
+
+=retina
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) // sass-lint:disable-line no-vendor-prefixes
+    @content
+
+=ellipsis
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis

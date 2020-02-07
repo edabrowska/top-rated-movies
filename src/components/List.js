@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import { getMovies } from '../store/actions/index'
 
+import MovieTile from './MovieTile'
+
 const ConnectedList = ({ movies, getMovies }) => {
 
   useEffect(() => {
@@ -12,8 +14,13 @@ const ConnectedList = ({ movies, getMovies }) => {
 console.log(movies)
   return (
   <ul className='list'>
-    {movies && movies.map(el => (
-      <li key={el.id}>{el.title} {el.release_date} {el.vote_average}</li>
+    {movies && movies.map(movie => (
+      <MovieTile
+        key={movie.id}
+        title={movie.title}
+        releaseDate={movie.release_date}
+        averageVote={movie.vote_average}
+      />
     ))}
   </ul>
 )}

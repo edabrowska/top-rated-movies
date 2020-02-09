@@ -6,9 +6,9 @@ import { useOnClickOutside } from '../hooks/useOnClickOutside'
 
 import { closeMovieModal } from '../store/actions/index'
 
-// import MovieTile from './MovieTile'
+import ProductionCompany from './ProductionCompany'
 
-const ConnectedModal = ({ movie }) => {
+const ConnectedModal = ({ movie, closeMovieModal }) => {
 
   if (Object.entries(movie).length === 0) return null
 
@@ -24,7 +24,7 @@ const ConnectedModal = ({ movie }) => {
   } = movie
 
   const modalContent = useRef(null)
-  useOnClickOutside(modalContent, () => closeMovieModal())
+  useOnClickOutside(modalContent, closeMovieModal)
 
   console.log(movie)
 
@@ -38,27 +38,36 @@ const ConnectedModal = ({ movie }) => {
         ref={modalContent}
       >
         <div className='modal__img-wrapper'>
-          <img src={poster_path} alt={`${title} poster image`} />
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+            alt={`${title} poster image`}
+            className='modal__poster-image'
+          />
         </div>
         <div className='modal__content'>
           <div className='modal__header'>
             <div className='modal__title-wrapper'>
               <h3 className='modal__title'>{title}</h3>
-              <p>{release_date}</p>
+              <p className='modal__release-date'>{release_date}</p>
             </div>
-            <p>{vote_average}</p>
+            <p className='modal__vote'>{vote_average}</p>
           </div>
           <div className='modal__overview'>{overview}</div>
           <div className='modal__genre'>
-            <p>Genres:</p>
-            <>
-              {genres.map(genre => <p key={genre.id}>{genre.name}</p>)}
-            </>
+            <p className='modal__genre-title'>Genres:</p>
+            <div className='modal__genre-wrapper'>
+              {genres.map(genre => <p key={genre.id} className='modal__genre-type'>{genre.name}</p>)}
+            </div>
           </div>
           <div className='modal__production-company'>
-            component
+            {production_companies.map(company => <ProductionCompany
+              key={company.id}
+              logo={company.logo_path}
+              name={company.name}
+            />)}
           </div>
         </div>
+        <button className='modal__button' onClick={closeMovieModal}>asdXXX</button>
       </div>
     </div>
   )
@@ -69,7 +78,7 @@ const Modal = connect(
     movie: state.movieDetails.movie || {}
   }),
   dispatch => ({
-    closeMovieModal: dispatch(closeMovieModal())
+    closeMovieModal: () => dispatch(closeMovieModal())
   })
 )(ConnectedModal)
 

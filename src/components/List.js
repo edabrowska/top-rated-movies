@@ -1,17 +1,26 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
-import { getMovies } from '../store/actions/index'
+import { getMovies, openMovieModal } from '../store/actions/index'
 
 import MovieTile from './MovieTile'
 
-const ConnectedList = ({ movies, getMovies }) => {
+function mapDispatchToProps (dispatch) {
+  return {
+    dispatch,
+    ...bindActionCreators({ getMovies }, dispatch)
+  }
+}
+
+const ConnectedList = ({ movies, getMovies, dispatch }) => {
 
   useEffect(() => {
     getMovies()
   }, [])
 
-console.log(movies)
+  const openModalWithMovie = id => dispatch(openMovieModal(id))
+
   return (
   <ul className='list'>
     {movies && movies.map(movie => (
@@ -20,6 +29,7 @@ console.log(movies)
         title={movie.title}
         releaseDate={movie.release_date}
         averageVote={movie.vote_average}
+        onClick={() => openModalWithMovie(movie.id)}
       />
     ))}
   </ul>
@@ -27,9 +37,9 @@ console.log(movies)
 
 const List = connect(
   state => ({
-    movies: state.movies.slice(0, 20)
+    movies: state.app.movies.slice(0, 20)
   }),
-  { getMovies }
+  mapDispatchToProps
 )(ConnectedList)
 
 export default List

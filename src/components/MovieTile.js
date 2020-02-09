@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MovieTile = ({ title, releaseDate, averageVote }) => {
+const MovieTile = ({ title, releaseDate, averageVote, onClick }) => {
   return (
     <li className='movie-tile'>
       <div className='movie-tile__wrapper-left'>
@@ -9,7 +9,7 @@ const MovieTile = ({ title, releaseDate, averageVote }) => {
       </div>
       <div className='movie-tile__wrapper-right'>
         <p className='movie-tile__rating'>{averageVote}</p>
-        <button className='movie-tile__button'>INFO</button>
+        <button className='movie-tile__button' onClick={onClick}>INFO</button>
       </div>
     </li>
   )

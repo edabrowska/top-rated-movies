@@ -1,0 +1,53 @@
+.modal
+  margin: auto
+  min-height: 30rem
+  width: 100%
+  max-width: 46.6rem
+  min-width: 30rem
+  position: relative
+  background-color: $color-white
+  background-clip: padding-box
+  opacity: 0
+  pointer-events: none
+  display: flex
+  padding: 20px 10px
+
+  &__page-overlay
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $color-overlay
+    z-index: 9
+    padding: 5.8rem 1rem
+    -webkit-overflow-scrolling: touch // sass-lint:disable-line no-vendor-prefixes
+    overflow-y: auto
+
+    &--modal-in
+        +appear-animation(overlay-in)
+
+    &--modal-out
+      +appear-animation(overlay-out)
+
+  &--modal-in
+    pointer-events: auto
+    +appear-animation(modal-in)
+
+  &--modal-out
+    +appear-animation(modal-out)
+
+  &__img-wrapper
+    display: none
+
++media-breakpoint-up($breakpoint-sm)
+  .modal
+    &__img-wrapper
+      display: block
+      height: 124px
+      width: 94px
+      margin-right: 20px

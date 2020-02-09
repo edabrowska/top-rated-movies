@@ -7,6 +7,7 @@ import store from './store/index'
 import './styles/index.sass'
 
 import List from './components/List'
+import Modal from './components/Modal'
 
 const App = () => {
   return <Provider store={store}>
@@ -14,6 +15,7 @@ const App = () => {
       <h1 className='container__title'>Top 20 most popular movies</h1>
       <List />
     </div>
+    <Modal />
   </Provider>
 }
 

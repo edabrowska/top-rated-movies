@@ -14,3 +14,9 @@
   overflow: hidden
   white-space: nowrap
   text-overflow: ellipsis
+
+=appear-animation($name, $duration: .3s, $fill-mode: forwards)
+  animation-name: $name
+  animation-duration: $duration
+  animation-timing-function: ease-in-out
+  animation-fill-mode: $fill-mode

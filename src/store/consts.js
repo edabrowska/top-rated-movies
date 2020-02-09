@@ -1,2 +1,3 @@
 export const GET_MOVIES = 'GET_MOVIES'
-export const GET_MOVIE = 'GET_MOVIE'
+export const MOVIE_MODAL_OPEN = 'MOVIE_MODAL_OPEN'
+export const MOVIE_MODAL_CLOSE = 'MOVIE_MODAL_CLOSE'

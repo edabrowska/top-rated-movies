@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieTile Snapshot 1`] = `
+<li
+  className="movie-tile"
+>
+  <div
+    className="movie-tile__wrapper-left"
+  >
+    <h3
+      className="movie-tile__title"
+    >
+      Ad Astra
+    </h3>
+    <p>
+      2019-09-17
+    </p>
+  </div>
+  <div
+    className="movie-tile__wrapper-right"
+  >
+    <p
+      className="movie-tile__rating"
+    >
+      9
+    </p>
+    <button
+      className="movie-tile__button"
+      onClick={[Function]}
+    >
+      INFO
+    </button>
+  </div>
+</li>
+`;

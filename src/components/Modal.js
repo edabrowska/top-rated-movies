@@ -26,8 +26,6 @@ const ConnectedModal = ({ movie, closeMovieModal }) => {
   const modalContent = useRef(null)
   useOnClickOutside(modalContent, closeMovieModal)
 
-  console.log(movie)
-
   return (
     <div className={bemCx('modal__page-overlay', id
       ? 'overlay-in'

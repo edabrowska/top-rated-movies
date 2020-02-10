@@ -5,16 +5,16 @@ import { Provider } from 'react-redux'
 
 import initialState from '../../__mocks__/fileMock'
 
-import List from '../../src/components/List'
+import Modal from '../../src/components/Modal'
 
-describe('List', () => {
-  const movies = initialState.app.movies
+describe('Modal', () => {
+  const movie = initialState.movieDetails.movie
   const mockStore = configureStore()
 
   it('Snapshot', () => {
     const component = renderer.create(
       <Provider store={mockStore(initialState)}>
-        <List movies={movies} />
+        <Modal movie={movie} />
       </Provider>
     )
     const tree = component.toJSON()

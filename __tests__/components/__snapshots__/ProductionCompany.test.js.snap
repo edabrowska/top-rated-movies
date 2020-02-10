@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductionCompany Snapshot 1`] = `
+<div
+  className="production-company production-company--without-logo"
+>
+  <p
+    className="production-company__name"
+  >
+    disney
+  </p>
+</div>
+`;

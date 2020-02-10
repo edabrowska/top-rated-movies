@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Snapshot 1`] = `
+<div
+  className="modal__page-overlay modal__page-overlay--overlay-in"
+>
+  <div
+    className="modal modal--modal-in"
+  >
+    <div
+      className="modal__img-wrapper"
+    >
+      <img
+        alt="Dolittle poster image"
+        className="modal__poster-image"
+        src="https://image.tmdb.org/t/p/w500//3Nt3v1uzUgfSuVARD1AnI9g9Zl9.jpg"
+      />
+    </div>
+    <div
+      className="modal__content"
+    >
+      <div
+        className="modal__header"
+      >
+        <div
+          className="modal__title-wrapper"
+        >
+          <h3
+            className="modal__title"
+          >
+            Dolittle
+          </h3>
+          <p
+            className="modal__release-date"
+          >
+            2020-01-01
+          </p>
+        </div>
+        <p
+          className="modal__vote"
+        >
+          6.4
+        </p>
+      </div>
+      <div
+        className="modal__overview"
+      >
+        After losing his wife seven years earlier, the eccentric Dr. John Dolittle, famed doctor and veterinarian of Queen Victoria’s England, hermits himself away behind the high walls of Dolittle Manor with only his menagerie of exotic animals for company. But when the young queen falls gravely ill, a reluctant Dolittle is forced to set sail on an epic adventure to a mythical island in search of a cure, regaining his wit and courage as he crosses old adversaries and discovers wondrous creatures.
+      </div>
+      <div
+        className="modal__genre"
+      >
+        <p
+          className="modal__genre-title"
+        >
+          Genres:
+        </p>
+        <div
+          className="modal__genre-wrapper"
+        >
+          <p
+            className="modal__genre-type"
+          >
+            Family
+          </p>
+          <p
+            className="modal__genre-type"
+          >
+            Comedy
+          </p>
+        </div>
+      </div>
+      <div
+        className="modal__production-company"
+      >
+        <div
+          className="production-company production-company--without-logo"
+        >
+          <p
+            className="production-company__name"
+          >
+            Universal Pictures
+          </p>
+        </div>
+        <div
+          className="production-company production-company--without-logo"
+        >
+          <p
+            className="production-company__name"
+          >
+            Team Downey
+          </p>
+        </div>
+        <div
+          className="production-company production-company--without-logo"
+        >
+          <p
+            className="production-company__name"
+          >
+            Perfect World Pictures
+          </p>
+        </div>
+      </div>
+    </div>
+    <button
+      className="modal__button"
+      onClick={[Function]}
+    >
+      asdXXX
+    </button>
+  </div>
+</div>
+`;

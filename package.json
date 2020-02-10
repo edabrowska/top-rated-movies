@@ -7,20 +7,27 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --open --hot --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "test": "jest --no-cache --watch"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
+    "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.1.0",
     "node-sass": "^4.13.1",
     "react-redux": "^7.1.3",
+    "react-test-renderer": "^16.12.0",
     "redux": "^4.0.5",
+    "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.3.0",
+    "regenerator-runtime": "^0.13.3",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
     "webpack": "^4.41.5",
@@ -33,5 +40,17 @@
     "mini-css-extract-plugin": "^0.9.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "setupFiles": [
+      "<rootDir>/jest-config/setupTestsAfterEnv.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
   }
 }

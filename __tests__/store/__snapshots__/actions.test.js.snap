@@ -21,20 +21,41 @@ Array [
 exports[`action get data gets single data and opens modal 1`] = `
 Array [
   Object {
-    "payload": Array [
-      Object {
-        "id": 419704,
-        "release_date": "2019-09-17",
-        "title": "Ad Astra",
-        "vote_average": 6,
-      },
-      Object {
-        "id": 495764,
-        "release_date": "2020-02-05",
-        "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
-        "vote_average": 7.1,
-      },
-    ],
+    "payload": Object {
+      "genres": Array [
+        Object {
+          "id": 10751,
+          "name": "Family",
+        },
+        Object {
+          "id": 35,
+          "name": "Comedy",
+        },
+      ],
+      "id": 448119,
+      "overview": "After losing his wife seven years earlier, the eccentric Dr. John Dolittle, famed doctor and veterinarian of Queen Victoria’s England, hermits himself away behind the high walls of Dolittle Manor with only his menagerie of exotic animals for company. But when the young queen falls gravely ill, a reluctant Dolittle is forced to set sail on an epic adventure to a mythical island in search of a cure, regaining his wit and courage as he crosses old adversaries and discovers wondrous creatures.",
+      "poster_path": "/3Nt3v1uzUgfSuVARD1AnI9g9Zl9.jpg",
+      "production_companies": Array [
+        Object {
+          "id": 33,
+          "logo_path": null,
+          "name": "Universal Pictures",
+        },
+        Object {
+          "id": 27467,
+          "logo_path": null,
+          "name": "Team Downey",
+        },
+        Object {
+          "id": 10338,
+          "logo_path": null,
+          "name": "Perfect World Pictures",
+        },
+      ],
+      "release_date": "2020-01-01",
+      "title": "Dolittle",
+      "vote_average": 6.4,
+    },
     "type": "MOVIE_MODAL_OPEN",
   },
 ]

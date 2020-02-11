@@ -15,7 +15,8 @@ import { API_KEY } from '../../src/utils/consts'
 describe('action get data', () => {
 	const middlewares = [ thunk ]
 	const mockStore = configureStore(middlewares)
-	const movies = initialState.app.movies
+	const allMovies = initialState.app.movies
+	const oneMovie = initialState.movieDetails.movie
 	const movie_id = 419704
 	let store
 
@@ -31,7 +32,7 @@ describe('action get data', () => {
 	it('gets data', () => {
 		nock('https://api.themoviedb.org/3')
 			.get(`/movie/popular?api_key=${API_KEY}&page=1`)
-			.reply(200, movies)
+			.reply(200, allMovies)
 
 		return store.dispatch(getMovies()).then(() => {
 			expect(store.getActions()).toMatchSnapshot()
@@ -41,7 +42,7 @@ describe('action get data', () => {
 	it('gets single data and opens modal', () => {
 		nock('https://api.themoviedb.org/3')
 			.get(`/movie/${movie_id}?api_key=${API_KEY}`)
-			.reply(200, movies)
+			.reply(200, oneMovie)
 
 		return store.dispatch(openMovieModal(movie_id)).then(() => {
 			expect(store.getActions()).toMatchSnapshot()

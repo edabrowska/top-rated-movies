@@ -1,30 +1,20 @@
 Arguments: 
-  /Users/edytadabrowska/.nvm/versions/node/v12.6.0/bin/node /usr/local/Cellar/yarn/1.17.3/libexec/bin/yarn.js add --dev transform-decorators-legacy transform-es2015-modules-commonjs
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add --dev nock
 
 PATH: 
-  /Users/edytadabrowska/.nvm/versions/node/v12.6.0/bin:/Users/edytadabrowska/.rvm/gems/ruby-2.4.1/bin:/Users/edytadabrowska/.rvm/gems/ruby-2.4.1@global/bin:/Users/edytadabrowska/.rvm/rubies/ruby-2.4.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/edytadabrowska/.rvm/bin:/Users/edytadabrowska/.rvm/bin
+  C:\Users\Lenovo\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Lenovo\bin;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Microsoft VS Code Insiders\bin;C:\Users\Lenovo\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Users\Lenovo\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\Lenovo\AppData\Local\atom\bin;C:\Users\Lenovo\AppData\Local\.meteor;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code Insiders\bin;C:\Users\Lenovo\AppData\Local\Yarn\bin;C:\Users\Lenovo\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Users\Lenovo\AppData\Local\flutter\bin;C:\Users\Lenovo\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
-  1.17.3
+  1.7.0
 
 Node version: 
-  12.6.0
+  12.15.0
 
 Platform: 
-  darwin x64
+  win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/transform-decorators-legacy: Not found
-      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:66830:18)
-      at Request.self.callback (/usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:140464:22)
-      at Request.emit (events.js:203:13)
-      at Request.<anonymous> (/usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:141436:10)
-      at Request.emit (events.js:203:13)
-      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.17.3/libexec/lib/cli.js:141358:12)
-      at Object.onceWrapper (events.js:291:20)
-      at IncomingMessage.emit (events.js:208:15)
-      at endReadableNT (_stream_readable.js:1154:12)
-      at processTicksAndRejections (internal/process/task_queues.js:77:11)
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Lenovo\Documents\projekty\showmax-analitics\top-rated-movies\node_modules\@babel\compat-data\node_modules\.bin'
 
 npm manifest: 
   {
@@ -54,7 +44,9 @@ npm manifest:
       "react-redux": "^7.1.3",
       "react-test-renderer": "^16.12.0",
       "redux": "^4.0.5",
+      "redux-mock-store": "^1.5.4",
       "redux-thunk": "^2.3.0",
+      "regenerator-runtime": "^0.13.3",
       "sass-loader": "^8.0.2",
       "style-loader": "^1.1.3",
       "webpack": "^4.41.5",
@@ -69,20 +61,14 @@ npm manifest:
       "react-dom": "^16.12.0"
     },
     "jest": {
-      "transform": {
-        "^.+\\.jsx?$": "<rootDir>/jest-config/babelTransform.js",
-        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/jest-config/fileTransformer.js"
-      },
       "moduleNameMapper": {
-        "^.+\\.(css|less)$": "<rootDir>/jest-config/fileTransformer.js"
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+        "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
       },
-      "moduleDirectories": [
-        "<rootDir>/src",
-        "<rootDir>",
-        "node_modules"
+      "setupFiles": [
+        "<rootDir>/jest-config/setupTestsAfterEnv.js"
       ],
-      "coveragePathIgnorePatterns": [
-        "<rootDir>/jest-config/",
+      "testPathIgnorePatterns": [
         "<rootDir>/node_modules/"
       ]
     }
@@ -4910,6 +4896,11 @@ Lockfile:
     dependencies:
       p-locate "^4.1.0"
   
+  lodash.isplainobject@^4.0.6:
+    version "4.0.6"
+    resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
+    integrity sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs=
+  
   lodash.sortby@^4.7.0:
     version "4.7.0"
     resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
@@ -6325,6 +6316,13 @@ Lockfile:
       indent-string "^2.1.0"
       strip-indent "^1.0.1"
   
+  redux-mock-store@^1.5.4:
+    version "1.5.4"
+    resolved "https://registry.yarnpkg.com/redux-mock-store/-/redux-mock-store-1.5.4.tgz#90d02495fd918ddbaa96b83aef626287c9ab5872"
+    integrity sha512-xmcA0O/tjCLXhh9Fuiq6pMrJCwFRaouA8436zcikdIpYWWCjU76CRk+i2bHx8EeiSiMGnB85/lZdU3wIJVXHTA==
+    dependencies:
+      lodash.isplainobject "^4.0.6"
+  
   redux-thunk@^2.3.0:
     version "2.3.0"
     resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
@@ -6350,7 +6348,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
     integrity sha512-1G6jJVDWrt0rK99kBjvEtziZNCICAuvIPkSiUFIQxVP06RCVpq3dmDo2oi6ABpYaDYaTRr67BEhL8r1wgEZZKg==
   
-  regenerator-runtime@^0.13.2:
+  regenerator-runtime@^0.13.2, regenerator-runtime@^0.13.3:
     version "0.13.3"
     resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
     integrity sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw==

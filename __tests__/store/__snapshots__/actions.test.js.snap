@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`action close modal closes modal 1`] = `
+Array [
+  Object {
+    "payload": null,
+    "type": "MOVIE_MODAL_CLOSE",
+  },
+]
+`;
+
+exports[`action get data gets data 1`] = `
+Array [
+  Object {
+    "payload": undefined,
+    "type": "GET_MOVIES",
+  },
+]
+`;
+
+exports[`action get data gets single data and opens modal 1`] = `
+Array [
+  Object {
+    "payload": Array [
+      Object {
+        "id": 419704,
+        "release_date": "2019-09-17",
+        "title": "Ad Astra",
+        "vote_average": 6,
+      },
+      Object {
+        "id": 495764,
+        "release_date": "2020-02-05",
+        "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+        "vote_average": 7.1,
+      },
+    ],
+    "type": "MOVIE_MODAL_OPEN",
+  },
+]
+`;

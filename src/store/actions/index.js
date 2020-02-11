@@ -1,3 +1,5 @@
+import fetch from 'isomorphic-fetch'
+
 import { GET_MOVIES, MOVIE_MODAL_OPEN, MOVIE_MODAL_CLOSE } from '../consts'
 import { API_KEY } from '../../utils/consts'
 

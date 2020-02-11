@@ -65,7 +65,6 @@ const ConnectedModal = ({ movie, closeMovieModal }) => {
             />)}
           </div>
         </div>
-        <button className='modal__button' onClick={closeMovieModal}>asdXXX</button>
       </div>
     </div>
   )

@@ -102,12 +102,6 @@ exports[`Modal Snapshot 1`] = `
         </div>
       </div>
     </div>
-    <button
-      className="modal__button"
-      onClick={[Function]}
-    >
-      asdXXX
-    </button>
   </div>
 </div>
 `;

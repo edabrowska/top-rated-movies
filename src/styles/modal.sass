@@ -13,6 +13,7 @@
   padding: 20px 10px
   overflow-y: auto
   max-height: 85vh
+  cursor: default
 
   &__page-overlay
     position: fixed
@@ -90,23 +91,17 @@
     flex-wrap: wrap
     justify-content: space-between
 
-  &__button
-    position: absolute
-    top: -25px
-    right: 0
-    color: $color-white
-    font-size: 1.6rem
-    height: 20px
-    width: 20px
-    cursor: pointer
-
 +media-breakpoint-up($breakpoint-sm)
   .modal
+    padding: 20px
+
     &__img-wrapper
       display: block
-      height: 100%
-      width: 100%
+      width: 30%
       margin-right: 20px
+
+    &__content
+      width: 70%
 
     &__poster-image
       width: 100%
